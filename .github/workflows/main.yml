@@ -42,11 +42,10 @@ jobs:
         run: |
           python test_application.py
           
-          deploy-to-test:
+  deploy-to-test:
     # Only run this job if "build" has ended successfully
     needs:
       - build
-      
     runs-on: ubuntu-latest
 
     steps:
